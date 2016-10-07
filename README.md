@@ -45,12 +45,7 @@ Anything can be highligted such as references to images or links.
 
 This is work in progress.
 
-Please discuss on the galaxy training material [issue](https://github.com/bgruening/training-material/issues/127). 
-
-Or if you are not participating to galaxy, please [open an issue in this repository](https://github.com/jibe-b/markdown_to_reveal/issue).
-
-
-
+Please discuss on the galaxy training material [issue](https://github.com/bgruening/training-material/issues/128). 
 
 
 
