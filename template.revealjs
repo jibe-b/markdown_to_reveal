@@ -1,29 +1,67 @@
 <!doctype html>
-<html lang="en">    
-<head>
-    <meta charset="utf-8">
-    <title>Title: Subtitle</title>
-    <link rel="stylesheet" href="reveal_js/css/reveal.min.css">
-    <link rel="stylesheet" href="reveal_js/css/theme/night.css" id="theme">
-</head>
- 
-<body>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Topic name</title>
+
+		<link rel="stylesheet" href="../../shared/reveal.js/css/reveal.css">
+		<link rel="stylesheet" href="../../shared/reveal.js/css/theme/simple.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="../../shared/reveal.js/lib/css/zenburn.css">
+
+		<link rel="stylesheet" href="../../shared/css/custom.css" id="theme">
+
+		<!-- Printing and PDF exports -->
+        <script>
+          if( window.location.search.match( /print-pdf/gi ) ) {
+            var link = document.createElement( 'link' );
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = '../../shared/reveal.js/css/print/pdf.css';
+            document.getElementsByTagName( 'head' )[0].appendChild( link );
+          }
+        </script>
+		<!--<script>
+            if (window.location.search.match(/print-pdf/gi)) {
+                document.write('<link rel="stylesheet" href="css/pdf.css" type="text/css">');
+            }
+        </script>-->
+
+		<!--[if lt IE 9]>
+        <script src="../../reveal.js/lib/js/html5shiv.js"></script>
+        <![endif]-->
+	</head>
+
+	<body>
     <div class="reveal">
         <div class="slides">
 $body$
         </div>
     </div>
-    <script src="reveal_js/lib/js/head.min.js"></script>
-    <script src="reveal_js/js/reveal.min.js"></script>
-    <script>
-        // Required, even if empty.
-        Reveal.initialize({
-            controls: false,
-            progress: false,
-            rollingLinks: false,
-            transition: "none",
-            maxScale: 10.0,
-        });
-    </script>
-</body>
+
+		<script type="text/javascript" src="../../shared/reveal.js/lib/js/head.min.js"></script>
+        <script type="text/javascript" src="../../shared/reveal.js/js/reveal.js"></script>
+        <script type="text/javascript">
+            Reveal.initialize({
+                slideNumber: !window.location.search.match(/print-pdf/gi),
+                history: true,
+		controls: true,
+                progress: true,
+                theme: Reveal.getQueryHash().theme,
+                transition: Reveal.getQueryHash().transition || 'concave',
+
+                dependencies: [
+                    { src: '../../shared/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                    { src: '../../shared/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: '../../shared/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: '../../shared/js/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    { src: '../../shared/reveal.js/plugin/notes/notes.js', async: true },
+                ]
+            });
+        </script>
+
+	</body>
 </html>

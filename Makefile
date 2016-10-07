@@ -21,13 +21,13 @@ TEMPLATE=		template.revealjs
 BEAMER_THEME=		Warsaw
 
 # Options for reveal.js presentations
-PANDOC_OPTIONS_HTML=	--section-divs -t html5 -s --template ${TEMPLATE}
+PANDOC_OPTIONS_HTML=	--section-divs -t html5 -s --template ${TEMPLATE} --slide-level=2
 
 # Options for PDFs
-PANDOC_OPTIONS_PDF=	-t beamer -V theme:${BEAMER_THEME}
+PANDOC_OPTIONS_PDF=	-t beamer -V theme:${BEAMER_THEME} --slide-level=2
 
 # Base filename for slides.{md,html,pdf}
-SLIDES=	slides
+SLIDES=	                ${FILE}
 
 PANDOC_OPTIONS=		--section-divs -t html5 -s --template ${TEMPLATE}
 
