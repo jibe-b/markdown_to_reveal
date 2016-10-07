@@ -17,6 +17,14 @@ How-to commands are relative to the galaxy training material repo (for the momen
 This command will take the markdown soure and produce slides. Look at the source and destination directories in the bash script.
 
 
+## Modify slides without modifying the markdown source
+
+An intermediary markdown file is produces (slides-text.md) and can be modified.
+
+Applying the command to this file will produce slides.
+
+/!\ if you don't change the names of files, modifications will be lost at the next execution.
+
 ## Syntax
 
 Markdown titles are used as slides titles (first level => new slide ; second level => subtitle in the slide).
